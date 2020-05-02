@@ -7,15 +7,16 @@ const pushupsURL = "https://teachablemachine.withgoogle.com/models/gmX6vfxbq/";/
 let squatsModel, pushupsModel, webcam, ctx, labelContainer, maxPredictions;
 let enterSquat = false, enterPushup = false, squatsCount = 0, pushupsCount = 0, squatComplete = false, pushupComplete = false
 pushupStatus="", squatStatus="";
+let devMode=false;
 
 
 async function init() {
+    //squats model url
     const squatsModelURL = squatsURL + "model.json";
     const squatsMetadataURL = squatsURL + "metadata.json";
-
+    //pushups model url
     const pushupsModelURL = pushupsURL + "model.json";
     const pushupsMetadataURL = pushupsURL + "metadata.json";
-
 
     // load the model and metadata
     // Refer to tmImage.loadFromFiles() in the API to support files from a file picker
@@ -79,12 +80,13 @@ async function predict() {
     }
     if (squatsPrediction[1].probability > 0.5) {
         enterSquat = true;
+        squatStatus = "";
     }
     if (enterSquat == true && squatsPrediction[1].probability <= 0.5) {
         enterSquat = false;
         squatComplete = false;
         squatStatus = "incomplete squat";
-    } else if (enterSquat == true && squatsPrediction[1].probability >= 0.8 && squatComplete == false) { //considering .75 as fully down
+    } else if (enterSquat == true && squatsPrediction[1].probability >= 0.8 && squatComplete == false) { //considering .8 as fully down
         squatsCount += 1;
         squatComplete = true;
         squatStatus = "complete squat";
@@ -97,26 +99,26 @@ async function predict() {
     }
     if (pushupsPrediction[1].probability > 0.5) {
         enterPushup = true;
+        squatStatus = "";
     }
     if (enterPushup == true && pushupsPrediction[1].probability <= 0.5) {
         enterPushup = false;
         pushupComplete = false;
         pushupStatus = "incomplete pushup";
-    } else if (enterPushup == true && pushupsPrediction[1].probability >= 0.75 && pushupComplete == false) { //considering .75 as fully down
+    } else if (enterPushup == true && pushupsPrediction[1].probability >= 0.8 && pushupComplete == false) { //considering .8 as fully down
         pushupsCount += 1;
         pushupComplete = true;
         pushupStatus = "complete pushup";
     }
-
-    // finally draw the poses
-    drawPose(pose);
+        // finally draw the poses
+        drawPose(pose);
 }
 
 function drawPose(pose) {
     if (webcam.canvas) {
         ctx.drawImage(webcam.canvas, 0, 0);
         // draw the keypoints and skeleton
-        if (pose) {
+        if (pose && devMode==true) {
             const minPartConfidence = 0.5;
             tmPose.drawKeypoints(pose.keypoints, minPartConfidence, ctx);
             tmPose.drawSkeleton(pose.keypoints, minPartConfidence, ctx);
