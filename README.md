@@ -1,5 +1,9 @@
+ExerciseBuddy - your workout partner
+=====================================
 
-DEMO HERE: [ExerciseBuddy](https://dagdihiman.github.io/)
+- - - - 
+### DEMO HERE:
+[ExerciseBuddy](https://dagdihiman.github.io/)
 
 
 Things to be kept in mind for accurate results:
