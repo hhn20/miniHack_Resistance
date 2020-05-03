@@ -1,13 +1,11 @@
 Things to be kept in mind for accurate results:
 ------------------------------------------------
 
--camera permission required for the Smart ExerciseBuddy. 
-	[data is not being stored anywhere, only used for realtime analysis]
--It takes a bit time to load after start workout button is clicked.
- So please be patient.
--make sure your full body posture is visible in the screen
--dont be too far or too close to the camera.
--For best results try in laptop. We are working on an android/iOS app too.
+- Camera permission required for the Smart ExerciseBuddy. [data is not being stored anywhere, only used for realtime analysis]
+- It takes a bit time to load after start workout button is clicked. So please be patient.
+- Make sure your full body posture is visible in the screen
+- Dont be too far or too close to the camera.
+- For best results try in laptop. We are working on an android/iOS app too.
 
 
 FEATURES:
@@ -25,16 +23,16 @@ FEATURES:
 GETTING STARTED STEPS:
 -----------------------
 - Enter the number of reps that you wish to do of each excercise
--click the start camera button
--make sure that the camera recognizes your pose
--Start Shedding those calories!!!!!!
+- Click the start camera button
+- make sure that the camera recognizes your pose
+- Start Shedding those calories!!!!!!
 
 
 
 FUTURE WORKS:
 -------------
 
-- adding more and more exercises.
-- separate user login with realtime database. 
+- Adding more and more exercises.
+- Separate user login with realtime database. 
 - Make ur own workout routine.
-- tracks and statistically shows user workout progress.
+- Tracks and statistically shows user workout progress.
