@@ -11,9 +11,7 @@
   <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/pose@0.8/dist/teachablemachine-pose.min.js"></script>
   <script src="js/main-js.js"></script>
 
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
-  <script src="js/darkmode-function.js"></script>
-  
+
 </head>
 <body>
   <div id="top-bar">
@@ -56,9 +54,10 @@
       <button type="button" onclick="countSquats()">Start Squats</button>
       <button type="button" onclick="countPushups()">Start pushups</button>
     </div>
-    <div class="fixed icons" id="dark-mode-button">
-      <img src="https://img.icons8.com/cotton/64/000000/settings--v1.png" width="30px" height="30px"/>
-    </div>
+    
+  </div>
+  <div class="fixed-icons" id="dark-mode-button">
+      <img src="https://img.icons8.com/cotton/64/000000/settings--v1.png" width="30px" height="30px" onclick="dark_mode"/>
   </div>
 </body>
 </html>
