@@ -58,12 +58,15 @@ html {
     position: relative;
     background: #FFFFFF;
     width: 600px;
+    height: 600px;
     max-width: 100%;
     border-radius: 4px;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
     margin: 100px auto 10px;
     overflow: hidden;
+    font-size: large;
+    line-height: 1.6;
   }
   .tabs-header {
     position: relative;
@@ -155,4 +158,23 @@ html {
   }
   .tabs-content .tab.active {
     display: block;
+  }
+
+  .tabs-content ul {
+    /* list-style-image: url("https://i.ya-webdesign.com/images/bullet-icons-png-1.png"); */
+    list-style: none;
+    margin-left: 10px;
+    color: #000;
+  }
+
+  .tabs-content li {
+    padding: .2em 0 0.5em 10px;
+    list-style-type: disc;
+
+    /* background-image: url('https://i.ya-webdesign.com/images/bullet-icons-png-1.pngimg/large-bullet.png') no-repeat; */
+    /* list-style-image: url('https://i.ya-webdesign.com/images/bullet-icons-png-1.pngimg/large-bullet.png'); */
+  }
+
+  hr {
+    border: 1px solid #F4B142;
   }
