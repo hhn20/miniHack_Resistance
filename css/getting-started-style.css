@@ -4,14 +4,35 @@ html {
   }
   
   body {
-    background: linear-gradient(to right, #457fca, #5691c8);
-    color: rgba(0, 0, 0, 0.6);
     font-family: "Roboto", sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.6em;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    background-size: 500px ;
+    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/5908/food.png);
   }
+
+  h1 {
+    margin-top: 1em;
+    text-align: center;
+    font-family: 'Oswald', Helvetica, sans-serif;
+    font-size: 60px;
+    transform: skewY(-0deg);
+    letter-spacing: 4px;
+    word-spacing: -8px;
+    color: tomato;
+    text-shadow: 
+      -1px -1px 0 firebrick,
+      -2px -2px 0 firebrick,
+      -3px -3px 0 firebrick,
+      -4px -4px 0 firebrick,
+      -5px -5px 0 firebrick,
+      -6px -6px 0 firebrick,
+      -7px -7px 0 firebrick,
+      -8px -8px 0 firebrick,
+      -30px 20px 40px dimgrey
+  } 
   
   [ripple] {
     z-index: 1;
@@ -63,7 +84,7 @@ html {
     border-radius: 4px;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
-    margin: 100px auto 10px;
+    margin: 50px auto 10px;
     overflow: hidden;
     font-size: large;
     line-height: 1.6;
