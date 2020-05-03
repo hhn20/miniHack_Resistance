@@ -414,11 +414,16 @@ body.night {
   width: 100%;
   text-decoration: none;
   text-align: center;
-  height: 20px;
+  padding: 10px 5px;
+  margin: 5px;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
 }
 
-.right-section input[type="text"] {
-  color: #fd9d08;
+.right-section input[type="button"] {
+  background-color: #1da1f2;
 }
 
 .right-section input[type="button"] {
