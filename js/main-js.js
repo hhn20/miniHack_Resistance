@@ -125,3 +125,11 @@ function drawPose(pose) {
         }
     }
 }
+
+//function to toggle dark mode
+function dark_mode() {
+    var element = document.body;
+    element.classList.toggle("dark-mode");
+    var topbar = document.getElementById("top-bar");
+    element.classList.toggle("topbar-dark-mode");
+  }
