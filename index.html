@@ -30,13 +30,17 @@
                       <li><a href="#">Women</a></li>
                   </ul> -->
               </li>
-              <li><a href="pages/about-us.html">About</a></li>
+              <li class="nav-move1"><a href="pages/about-us.html">About</a></li>
               <li class="nav-move1"><a href="pages/contact-us.html">Contact</a></li>
               <li class="nav-move1" onclick="dark_mode()" ondblclick="bunny_animate()">dark</li>
+              <li class="nav-move1" onclick="dev_mode_toggle()">Dev mode</li>
               <li class="nav-more">More
                 <ul>
+                  <li><a href="pages/about-us.html">About</a></li>
                   <li><a href="pages/contact-us.html">Contact</a></li>
                   <li onclick="dark_mode()" ondblclick="bunny_animate()">dark</li>
+                  <li onclick="dev_mode_toggle()">Dev mode</li>
+
                 </ul>
               </li>
           </ul>
@@ -45,25 +49,28 @@
     <div  class="sections">
         <div class="left-section">
           <div id="label-container"></div>
-          <hr>
-          <div id="squat-boolean-container"></div>
-          <div id="squat-count-container"></div>
-          <div id="squat-status-container"></div>
-          <hr>
-          <div id="pushup-boolean-container"></div>
-          <div id="pushup-count-container"></div>
-          <div id="pushup-status-container"></div>
+          <div id="squat-boolean-container" hidden></div>
+          <label>Squats done:<div id="squat-count-container"></div></label>
+          <div id="squat-status-container" hidden></div>
+          <div id="pushup-boolean-container" hidden></div>
+          <label>Pushups done:<div id="pushup-count-container"></div></label>
+          <div id="pushup-status-container" hidden></div>
+          <div id="pullup-boolean-container" hidden></div>
+          <label>Pullups done:<div id="pullup-count-container"></div></label>
+          <div id="pullup-status-container" hidden></div>
         </div>
         <div class="middle-section">
-          <div>Teachable Machine Pose Model</div>
+          <div>Camera View</div>
           <div><canvas id="canvas"></canvas></div>
         </div>
         <div class="right-section">
           <input type="button" onclick="init()" value="start camera"></input><br>
-          <input type="text" value="10" id="squat-entry"/>
-          <input type="button" onclick="countSquats()" value="Start Squats"></input><br>
-          <input type="text" value="10" id="pushup-entry"/>
-          <input type="button" type="button" onclick="countPushups()" value="Start pushups"></input><br>
+          <!-- <input type="text" value="10" id="squat-entry"/> -->
+          <input type="button" id="squatsBtn" onclick="countSquats()" value="Start Squats" disabled></input><br>
+          <!-- <input type="text" value="10" id="pushup-entry"/> -->
+          <input type="button" id="pushupsBtn" onclick="countPushups()" value="Start pushups" disabled></input><br>
+          <!-- <input type="text" value="10" id="pullup-entry"/> -->
+          <input type="button" id="pullupsBtn" onclick="countPullups()" value="Start pullups" disabled></input><br>
         </div>
       </div>
     </div>

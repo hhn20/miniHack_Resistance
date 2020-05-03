@@ -41,6 +41,9 @@ body {
     /* background: #f3f3f3; */
     font-family: 'Lexend Deca', sans-serif;
     font-size: 100%;
+    min-width:500px;        /* Suppose you want minimum width of 1000px */
+    width: auto !important;  /* Firefox will set width as auto */
+    width:500px;            /* As IE6 ignores !important it will set width as 1000px; */
 }
 #top-bar {
     position: absolute;;
@@ -98,8 +101,6 @@ body {
             &:hover {
                 background-color: $highlightColorRed;
                 border: 2px solid $highlightColorRed;
-                border-right: 2px solid $highlightColorRed;
-                border-bottom: 2px solid $highlightColorRed;
                 color: white;
                 ul {
                     visibility: visible;
@@ -117,25 +118,23 @@ body {
                 opacity: 0;
                 position: absolute;
                 display: block;
-                margin: 12px -12px;
+                margin: 12px -24px;
                 padding: 0;
                 background: $highlightColorOrange;
-                border: 2px solid #F7C833;
-                border-right: 2px solid #F89329;
-                border-bottom: 2px solid #F89329;
                 border-radius: 5px;
                 transition: opacity 0.2s, visibility 0.2s;
 
                 li {
                     margin: -2px 0 0 -2px;
-                    width: calc(100% - 20px);
+                    //width: calc(100% - 20px);
                     line-height: 1.7;
+                    color:black;
                 }
             }
         }
-        li:not(:last-child) {
-            margin-right: 20px;
-        }
+        // li:not(:last-child) {
+        //     margin-right: 20px;
+        // }
         .nav-more {
             display:none;
         }
@@ -391,4 +390,9 @@ body.night{
 
 #canvas {
     width:70%;
+}
+
+
+.disabled {
+    display:none;
 }
