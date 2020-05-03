@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>Exercise Buddy</title>
+  <!-- jquery import -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script> 
 
   <link href="https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css\style.css">
@@ -11,14 +13,15 @@
   <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/pose@0.8/dist/teachablemachine-pose.min.js"></script>
   <script src="js/main-js.js"></script>
 
-
 </head>
 <body>
-  <div id="top-bar">
-      <h1>ExerciseBuddy</h1>
+  <div id="container" class="container">
+    <div id="top-bar">
+      <h1><a href="index.html">ExerciseBuddy</a></h1></a>
       <nav class="nav-class">
           <ul>
-              <li><a href="index.html">Home</a></li>
+              <!-- <li><a href="index.html">Home</a></li> -->
+              <li><a href="pages/getting-started.html">Getting Started</a></li>
               <li>
                   <a href="#">Workout</a>
                   <ul>
@@ -28,60 +31,39 @@
               </li>
               <li><a href="pages/about-us.html">About</a></li>
               <li><a href="pages/contact-us.html">Contact</a></li>
-              <li><a href="pages/getting-started.html">Getting Started</a></li>
               <li onclick="dark_mode()">dark</li>
           </ul>
       </nav>
+    </div>
+    <div class="sections">
+      <div class="left-section">
+        <div id="label-container"></div>
+        <hr>
+        <div id="squat-boolean-container"></div>
+        <div id="squat-count-container"></div>
+        <div id="squat-status-container"></div>
+        <hr>
+        <div id="pushup-boolean-container"></div>
+        <div id="pushup-count-container"></div>
+        <div id="pushup-status-container"></div>
+      </div>
+      <div class="middle-section">
+        <div>Teachable Machine Pose Model</div>
+        <div><canvas id="canvas"></canvas></div>
+      </div>
+      <div class="right-section">
+        <button type="button" onclick="init()">Camera Permission</button>
+        <button type="button" onclick="countSquats()">Start Squats</button>
+        <button type="button" onclick="countPushups()">Start pushups</button>
+      </div>
+    </div>
+    <!-- <div class="fixed-icons" id="dark-mode-button" onclick="dark_mode()">
+        <img src="https://img.icons8.com/cotton/64/000000/settings--v1.png" width="30px" height="30px" />
+    </div> -->
+    <div class="darkmode inner-card fas fa-moon-cloud"></div>
   </div>
-  <div class="body-container">
-    <div class="left-section">
-      <div id="label-container"></div>
-      <hr>
-      <div id="squat-boolean-container"></div>
-      <div id="squat-count-container"></div>
-      <div id="squat-status-container"></div>
-      <hr>
-      <div id="pushup-boolean-container"></div>
-      <div id="pushup-count-container"></div>
-      <div id="pushup-status-container"></div>
-    </div>
-    <div class="middle-section">
-      <div>Teachable Machine Pose Model</div>
-      <div><canvas id="canvas"></canvas></div>
-    </div>
-    <div class="right-section">
-      <button type="button" onclick="init()">Camera Permission</button>
-      <button type="button" onclick="countSquats()">Start Squats</button>
-      <button type="button" onclick="countPushups()">Start pushups</button>
-    </div>
-    
-  </div>
-  <!-- <div class="fixed-icons" id="dark-mode-button" onclick="dark_mode()">
-      <img src="https://img.icons8.com/cotton/64/000000/settings--v1.png" width="30px" height="30px" />
-  </div> -->
-  
-<div id="container" class="container">
-	<div class="header card">
-		<div class="section-width">
-		<div class="logotext">LOGO</div>
-		</div>
-	</div>
-	<div class="content">
-		<div class="page inner-card section-width">
-		<div id="post1"></div>
-		<h1>Heading 1<a href="#post1" class="fad fa-bolt"></a></h1>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vehicula quis lectus a tempor. Praesent lobortis mi eu finibus lacinia. Aenean lacinia ornare libero, vel congue nunc convallis dictum. Vestibulum aliquam tempus posuere. Nullam vitae tellus ligula.<br>
-	Maecenas sit amet tortor nec lacus vulputate suscipit. Aliquam placerat, urna in maximus placerat, lectus ex tempor odio, facilisis rutrum arcu sapien rutrum libero. Nunc vestibulum posuere elementum.<br>
-	Mauris ultricies vitae eros a vestibulum. Pellentesque auctor facilisis massa sit amet euismod. Quisque magna lacus,<br>
-	vulputate non risus vel, luctus luctus enim. Aenean fringilla sit amet ipsum in dapibus. Vivamus tristique diam ut tellus elementum gravida a vel arcu.</p>
-		</div>
-	</div>
-	<div class="darkmode inner-card fas fa-moon-cloud"></div>
-</div>
-<div class="clip"></div>
- 
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
-<script  src="function.js"></script>
- 
+  <div class="dark-mode-button"></div>
+
+
 </body>
 </html>
