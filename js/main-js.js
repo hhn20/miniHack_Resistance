@@ -67,14 +67,16 @@ async function init() {
     document.getElementById("pushupsBtn").disabled = false;
     document.getElementById("pullupsBtn").disabled = false;
 
+    document.getElementById("cmrbtn").classList.toggle("disabled");
+
     alert("Models Ready to use!");
 }
 
 
 function countSquats() {
     squatMode=!squatMode;
-    color=document.getElementById("squatsBtn").style.background;
-    if (color=='red') {
+    var squatcolor=document.getElementById("squatsBtn").style.background;
+    if (squatcolor=='red') {
         document.getElementById("squatsBtn").style.background = '#1da1f2';
     }else {
         document.getElementById("squatsBtn").style.background = 'red';
@@ -83,18 +85,18 @@ function countSquats() {
 
 function countPushups() {
     pushupMode=!pushupMode;
-    color=document.getElementById("pushupsBtn").style.background;
-    if (color=='red') {
+    var pushcolor=document.getElementById("pushupsBtn").style.background;
+    if (pushcolor=='red') {
         document.getElementById("pushupsBtn").style.background = '#1da1f2';
     }else {
-        document.getElementById("squatsBtn").style.background = 'red';
+        document.getElementById("pushupsBtn").style.background = 'red';
     }
 }
 
 function countPullups() {
     pullupMode=!pullupMode;
-    color=document.getElementById("pullupsBtn").style.background
-    if (color=='red') {
+    var pullcolor=document.getElementById("pullupsBtn").style.background
+    if (pullcolor=='red') {
         document.getElementById("pullupsBtn").style.background = '#1da1f2';
     }else {
         document.getElementById("pullupsBtn").style.background = 'red';
