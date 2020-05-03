@@ -13,8 +13,6 @@ body {
   left: 0px;
   height: var(--headerHeight);
   width: 100%;
-  -webkit-animation: slideIN 0.5s ease-out;
-          animation: slideIN 0.5s ease-out;
   z-index: 10000;
   -webkit-box-shadow: 0 0 1rem -0.25rem var(--shadow);
           box-shadow: 0 0 1rem -0.25rem var(--shadow);
@@ -136,21 +134,6 @@ body {
 /* background: #fbb016; */
 /*dark mode animation*/
 /* Code By Webdevtrick ( https://webdevtrick.com ) */
-.dark-mode-button {
-  z-index: 2;
-  position: fixed;
-  bottom: 3rem;
-  left: 3rem;
-  width: 0rem;
-  height: 0rem;
-  border-radius: 100%;
-}
-
-.dark-mode-button.anim {
-  -webkit-animation: open 1.5s ease-in;
-  animation: open 1.5s ease-in;
-}
-
 @-webkit-keyframes open {
   0% {
     bottom: 3rem;
@@ -235,21 +218,59 @@ body {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  /* width:20%; */
+  width: 20%;
 }
 
 .container .sections .middle-section {
   -webkit-box-flex: 2;
       -ms-flex-positive: 2;
           flex-grow: 2;
-  /* width:50% */
+  width: 50%;
 }
 
 .container .sections .right-section {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  /* width: 20%; */
+  width: 20%;
+}
+
+.container .darkmode, .container .clip {
+  position: fixed;
+  bottom: 3rem;
+  left: 3rem;
+}
+
+.container .darkmode {
+  z-index: 2;
+  position: fixed;
+  bottom: 3rem;
+  left: 3rem;
+  font-size: 1.75rem;
+  padding: 1rem;
+  margin: 1px;
+  border-radius: 100%;
+  border-color: var(--iconColor) !important;
+  -webkit-box-shadow: 0 0 1rem -0.25rem var(--iconColor), inset 0 0 1rem -0.75rem var(--iconColor);
+          box-shadow: 0 0 1rem -0.25rem var(--iconColor), inset 0 0 1rem -0.75rem var(--iconColor);
+  color: var(--iconColor);
+  cursor: pointer;
+  -webkit-transition: .25s -.05s;
+  transition: .25s -.05s;
+}
+
+.container .darkmode:hover {
+  -webkit-box-shadow: 0 0 1rem -0.25rem var(--iconColor), inset 0 0 1rem -0.25rem var(--iconColor);
+          box-shadow: 0 0 1rem -0.25rem var(--iconColor), inset 0 0 1rem -0.25rem var(--iconColor);
+}
+
+.container .clip {
+  border-radius: 100%;
+}
+
+.container .clip.anim {
+  -webkit-animation: open 1.5s ease-in;
+  animation: open 1.5s ease-in;
 }
 
 .container:not(.dark) {
@@ -274,39 +295,6 @@ body {
   --iconColor:#05c534;
 }
 
-.container *[class*="card"] {
-  background: var(--sectionBackground);
-  color: var(--text1);
-  -webkit-box-shadow: 0 0 1rem -0.25rem var(--shadow);
-          box-shadow: 0 0 1rem -0.25rem var(--shadow);
-}
-
-.container *[class*="card"].inner-card {
-  border: 1px solid var(--borderColor);
-}
-
-.container .darkmode {
-  position: fixed;
-  bottom: 1rem;
-  left: 1rem;
-  font-size: 1.75rem;
-  padding: 1rem;
-  margin: 1px;
-  border-radius: 100%;
-  border-color: var(--iconColor) !important;
-  -webkit-box-shadow: 0 0 1rem -0.25rem var(--iconColor), inset 0 0 1rem -0.75rem var(--iconColor);
-          box-shadow: 0 0 1rem -0.25rem var(--iconColor), inset 0 0 1rem -0.75rem var(--iconColor);
-  color: var(--iconColor);
-  cursor: pointer;
-  -webkit-transition: .25s -.05s;
-  transition: .25s -.05s;
-}
-
-.container .darkmode:hover {
-  -webkit-box-shadow: 0 0 1rem -0.25rem var(--iconColor), inset 0 0 1rem -0.25rem var(--iconColor);
-          box-shadow: 0 0 1rem -0.25rem var(--iconColor), inset 0 0 1rem -0.25rem var(--iconColor);
-}
-
 @-webkit-keyframes flash {
   0%, 50%, 100% {
     color: var(--iconColor);
@@ -323,20 +311,6 @@ body {
   70%, 80% {
     color: var(--text1);
   }
-}
-
-#dark-mode-button {
-  position: fixed;
-  bottom: 3rem;
-  left: 3rem;
-  width: 0rem;
-  height: 0rem;
-  border-radius: 100%;
-}
-
-#dark-mode-button {
-  -webkit-animation: open 1.5s ease-in;
-  animation: open 1.5s ease-in;
 }
 
 body.night {

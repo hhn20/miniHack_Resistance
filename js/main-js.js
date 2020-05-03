@@ -141,16 +141,14 @@ let buttonenabled = true, scroll = 0;
 $(document).on("click", ".darkmode", function(){
 	if(!buttonenabled) return;
 	buttonenabled = false;
-	$(".dark-mode-button").html($("body >.container")[0].outerHTML); 
-	scrollbind($(".dark-mode-button .container"));
-	$(".dark-mode-button .container").toggleClass("dark").scrollTop(scroll); 
-	$(".dark-mode-button .darkmode").toggleClass("fa-moon").toggleClass("fa-sun"); 
-	$(".dark-mode-button").addClass("anim"); 
+	$(".clip").html($("body >.container")[0].outerHTML); 
+	$(".clip .container").toggleClass("dark").scrollTop(scroll); 
+	$(".clip").addClass("anim"); 
 	setTimeout(function(){
-		$("body >.container").replaceWith($(".dark-mode-button").html()) 
-		scrollbind($("body >.container")); 
-		$("body >.container").scrollTop(scroll);
-		$(".dark-mode-button").html("").removeClass("anim"); 
+		$("body >.container").replaceWith($(".clip").html()) 
+		//scrollbind($("body >.container")); 
+		//$("body >.container").scrollTop(scroll);
+		$(".clip").html("").removeClass("anim"); 
 		buttonenabled = true;
 	}, 1000); 
 });
