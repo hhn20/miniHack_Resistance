@@ -1,10 +1,11 @@
-/* Code By Webdevtrick ( https://webdevtrick.com ) */
 body {
     background: #efefef;
     font-size: 62.5%;
     font-family: 'Lato', sans-serif;
     font-weight: 300;
     color: #B6B6B6;
+    background-size: 500px ;
+    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/5908/food.png);
   }
   body section {
     background: white;
