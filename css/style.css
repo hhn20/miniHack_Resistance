@@ -13,6 +13,24 @@
     top: var(--headerHeight) !important;
     font-size: 2vw;
   }
+  h1 {
+    width: 100% !important;
+    text-align: center !important;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  /* For mobile phones: */
+  .left-section, .middle-section, .right-section {
+    width: 100% !important;
+    height: auto !important;
+  }
+  .nav-more {
+    display: inline-block !important;
+  }
+  .nav-move1 {
+    display: none !important;
+  }
 }
 
 body {
@@ -54,9 +72,10 @@ body {
   position: absolute;
   top: 0px;
   right: 0px;
-  height: 8vh;
+  height: var(--headerHeight);
   width: auto;
   font-size: 100%;
+  border-bottom: 1px solid #1da1f2;
 }
 
 .nav-class ul {
@@ -129,6 +148,10 @@ body {
 
 .nav-class ul li:not(:last-child) {
   margin-right: 20px;
+}
+
+.nav-class ul .nav-more {
+  display: none;
 }
 
 @-webkit-keyframes slideIN {
@@ -211,9 +234,8 @@ body {
   top: calc(2 * var(--headerHeight));
   left: 0px;
   height: calc(100vh - 2*var(--headerHeight));
-  width: calc(100% - 40px);
+  width: 100%;
   padding: 0;
-  border-collapse: collapse;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -227,7 +249,7 @@ body {
   position: relative;
   top: 0;
   left: 0%;
-  display: inline-block;
+  display: block;
   height: 100%;
   margin-top: 20px;
 }
@@ -239,18 +261,17 @@ body {
   color: black;
   display: block;
   margin-top: 7px;
-  background-color: #e5e5e5;
   height: 100%;
 }
 
 .container .sections .middle-section {
+  text-align: center;
   float: left;
   width: 60%;
   padding: 0 20px;
 }
 
 .container .sections .right-section {
-  background-color: #e5e5e5;
   float: left;
   width: 20%;
   padding: 15px;
@@ -349,10 +370,10 @@ body.night {
 .easter-bunny-image {
   z-index: 200000000000;
   position: fixed;
-  top: -10vw;
-  left: 80vw;
-  width: 10vw;
-  height: 10vw;
+  top: -200px;
+  right: 100px;
+  width: 200px;
+  height: 200px;
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
@@ -362,37 +383,35 @@ body.night {
           animation-name: bunny-enters;
   -webkit-animation-duration: 2s;
           animation-duration: 2s;
-  top: 0vw;
+  top: 0px;
 }
 
 @-webkit-keyframes bunny-enters {
   0% {
-    top: -10vw;
+    top: -200px;
   }
   50% {
-    top: -20vw;
+    top: -100px;
   }
   100% {
-    top: 0;
+    top: 0px;
   }
 }
 
 @keyframes bunny-enters {
   0% {
-    top: -10vw;
+    top: -200px;
   }
   50% {
-    top: -20vw;
+    top: -100px;
   }
   100% {
-    top: 0;
+    top: 0px;
   }
 }
 
-@media only screen and (max-width: 620px) {
-  /* For mobile phones: */
-  .left-section, .middle-section, .right-section {
-    width: 100%;
-  }
+.right-section input[type="text"], .right-section input[type="button"] {
+  width: 100%;
+  text-decoration: none;
 }
 /*# sourceMappingURL=style.css.map */

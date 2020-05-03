@@ -31,8 +31,14 @@
                   </ul> -->
               </li>
               <li><a href="pages/about-us.html">About</a></li>
-              <li><a href="pages/contact-us.html">Contact</a></li>
-              <li onclick="dark_mode()" ondblclick="bunny_animate()">dark</li>
+              <li class="nav-move1"><a href="pages/contact-us.html">Contact</a></li>
+              <li class="nav-move1" onclick="dark_mode()" ondblclick="bunny_animate()">dark</li>
+              <li class="nav-more">More
+                <ul>
+                  <li><a href="pages/contact-us.html">Contact</a></li>
+                  <li onclick="dark_mode()" ondblclick="bunny_animate()">dark</li>
+                </ul>
+              </li>
           </ul>
       </nav>
     </div>
@@ -53,9 +59,11 @@
           <div><canvas id="canvas"></canvas></div>
         </div>
         <div class="right-section">
-          <button type="button" onclick="init()">start camera</button><br>
-          <button type="button" onclick="countSquats()">Start Squats</button><br>
-          <button type="button" onclick="countPushups()">Start pushups</button><br>
+          <input type="button" onclick="init()">start camera</input><br>
+          <input type="text" value="10" id="squat-entry"/>
+          <input type="button" onclick="countSquats()">Start Squats</input><br>
+          <input type="text" value="10" id="pushup-entry"/>
+          <input type="button" type="button" onclick="countPushups()">Start pushups</input><br>
         </div>
       </div>
     </div>
