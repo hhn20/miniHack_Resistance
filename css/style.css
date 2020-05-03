@@ -14,7 +14,8 @@ body {
 h1 {
     display:inline-block;
     font-size: 1.9rem;
-    color: rgba(206, 53, 53, 0.849);
+    /* color: rgba(206, 53, 53, 0.849); */
+    color: #fd9d08;
     height: 8vh;
     width:300px;
     margin: auto;
