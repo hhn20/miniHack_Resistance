@@ -19,7 +19,7 @@
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
   /* For mobile phones: */
   .left-section, .middle-section, .right-section {
     width: 100% !important;

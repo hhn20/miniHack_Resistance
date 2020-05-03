@@ -47,7 +47,9 @@ async function init() {
         labelContainer.appendChild(document.createElement("div"));
     }
 }
-
+function countSquats() {
+    
+}
 async function loop(timestamp) {
     webcam.update(); // update the webcam frame
     await predict();
