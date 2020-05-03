@@ -22,7 +22,7 @@ FEATURES:
  with features like :counting your exercise reps , time taken, etc.
 - As of now only 3 exercises are availaible. But we will be adding more in future.
 - Dark mode supported [challenge 1]
-- Hidden easter egg [challenge 2]
+- 2 Hidden easter egg [challenge 2]
 - get exercise training for specific muscles with our MuscleMan 
   just by clicking on the desired muscles/body parts.	
 - DevMod : Get Insight how the ExerciseBuddy works.
