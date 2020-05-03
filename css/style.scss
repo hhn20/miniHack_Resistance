@@ -363,5 +363,19 @@ body.night{
     input[type="text"], input[type="button"] {
         width:100%;
         text-decoration: none;
+        text-align: center;
+        height:20px;
     }
+    input[type="text"] {
+        color:$highlightColorOrange;
+
+    }
+    input[type="button"] {
+        background-color: $highlightColorBlue;
+    }
+}
+
+
+#canvas {
+    width:70%;
 }

@@ -413,5 +413,19 @@ body.night {
 .right-section input[type="text"], .right-section input[type="button"] {
   width: 100%;
   text-decoration: none;
+  text-align: center;
+  height: 20px;
+}
+
+.right-section input[type="text"] {
+  color: #fd9d08;
+}
+
+.right-section input[type="button"] {
+  background-color: #1da1f2;
+}
+
+#canvas {
+  width: 70%;
 }
 /*# sourceMappingURL=style.css.map */
