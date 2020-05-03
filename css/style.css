@@ -252,13 +252,13 @@ body {
   display: block;
   height: 100%;
   margin-top: 20px;
+  color: inherit;
 }
 
 .container .sections .left-section {
   float: left;
   width: 20%;
   text-align: center;
-  color: black;
   display: block;
   margin-top: 7px;
   height: 100%;
