@@ -16,7 +16,7 @@ body {
   z-index: 10000;
   -webkit-box-shadow: 0 0 1rem -0.25rem var(--shadow);
           box-shadow: 0 0 1rem -0.25rem var(--shadow);
-  background: var(--background);
+  background: inherit;
   border-bottom: 2px red;
 }
 
@@ -191,7 +191,6 @@ body {
   left: 0px;
   width: 100%;
   height: 100%;
-  display: flex;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
@@ -205,37 +204,18 @@ body {
   top: var(--headerHeight);
   left: 0px;
   height: calc(100vh - var(--headerHeight));
+  width: 100%;
+  padding: 0;
+  margin: 0;
 }
 
 .container .sections .left-section, .container .sections .middle-section, .container .sections .right-section {
   display: inline-block;
   border: 2px solid red;
-  position: relative;
   height: 100%;
 }
 
-.container .sections .left-section {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  width: 20%;
-}
-
-.container .sections .middle-section {
-  -webkit-box-flex: 2;
-      -ms-flex-positive: 2;
-          flex-grow: 2;
-  width: 50%;
-}
-
-.container .sections .right-section {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  width: 20%;
-}
-
-.container .darkmode, .container .clip {
+.container .darkmode, .container .clip, .container .darkmodebtn {
   position: fixed;
   bottom: 3rem;
   left: 3rem;
@@ -265,6 +245,8 @@ body {
 }
 
 .container .clip {
+  width: 0rem;
+  height: 0rem;
   border-radius: 100%;
 }
 
@@ -319,5 +301,39 @@ body.night {
 
 .fixed-icons {
   z-index: 1000;
+}
+
+.easter-bunny-image {
+  display: none;
+  z-index: 200000000000;
+  position: fixed;
+  top: 0;
+  left: 25vw;
+  width: 50vw;
+  height: 50vw;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  -webkit-animation-name: bunny-enters;
+          animation-name: bunny-enters;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+@-webkit-keyframes bunny-enters {
+  from {
+    top: -50vw;
+  }
+  to {
+    top: 0;
+  }
+}
+
+@keyframes bunny-enters {
+  from {
+    top: -50vw;
+  }
+  to {
+    top: 0;
+  }
 }
 /*# sourceMappingURL=style.css.map */

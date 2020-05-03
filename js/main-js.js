@@ -127,20 +127,12 @@ function drawPose(pose) {
 }
 
 //function to toggle dark mode
-function dark_mode() {
-    var element = document.body;
-    element.classList.toggle("dark-mode");
-    var topbar = document.getElementById("top-bar");
-    topbar.classList.toggle("dark-mode");
-  }
-
-
-  //something
-  // Code By Webdevtrick ( https://webdevtrick.com )
+// Code By Webdevtrick ( https://webdevtrick.com )
 let buttonenabled = true, scroll = 0;
 $(document).on("click", ".darkmode", function(){
 	if(!buttonenabled) return;
-	buttonenabled = false;
+    buttonenabled = false;
+    let clipContents=$(".clip")[0].outerHTML;
 	$(".clip").html($("body >.container")[0].outerHTML); 
 	$(".clip .container").toggleClass("dark").scrollTop(scroll); 
 	$(".clip").addClass("anim"); 
@@ -148,9 +140,12 @@ $(document).on("click", ".darkmode", function(){
 		$("body >.container").replaceWith($(".clip").html()) 
 		//scrollbind($("body >.container")); 
 		//$("body >.container").scrollTop(scroll);
-		$(".clip").html("").removeClass("anim"); 
+		$(".clip").html(clipContents).removeClass("anim"); 
 		buttonenabled = true;
 	}, 1000); 
+});
+$(document).on("dblclick", ".darkmode", function(){
+	console.log("easter bunny");
 });
 
 const scrollbind = el => el.bind("scroll", function(){
