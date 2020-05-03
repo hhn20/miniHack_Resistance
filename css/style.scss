@@ -2,17 +2,30 @@
 $primarybackground:#FFFF;
 $highlightColorOrange:#fd9d08;
 $highlightColorRed:red;
+$highlightColorBlue:#1da1f2;
 :root {
     --headerHeight:70px;
 }
 
+* {
+    box-sizing: border-box;
+  }
+
+@media screen and (max-width: 900px) {
+    .nav-class {
+      left: 0px; 
+      top: var(--headerHeight) !important;
+      font-size:2vw;
+    }
+}
 
 body {
     /* background: #f3f3f3; */
     font-family: 'Lexend Deca', sans-serif;
+    font-size: 100%;
 }
 #top-bar {
-    position:fixed;
+    position: absolute;;
     top:0px;
     left:0px;
     height:var(--headerHeight);
@@ -20,8 +33,8 @@ body {
     // animation: slideIN 0.5s ease-out;
     z-index:10000;
     box-shadow: 0 0 1rem -0.25rem var(--shadow);
-    background:inherit ;
-    border-bottom: 2px $highlightColorRed;
+    background:inherit;
+    border-bottom: 1px solid $highlightColorBlue;
     h1 {
         display:inline-block;
         font-size: 1.9rem;
@@ -40,9 +53,12 @@ body {
 }
 
 .nav-class {
-    float:right;
+    position: absolute;
+    top:0px;
+    right:0px;
     height:8vh;
-    
+    width:auto;
+    font-size: 100%;
     ul {
         position: relative;
         display: flex;
@@ -55,7 +71,7 @@ body {
             border-radius: 5px;
             padding: 10px;
             transition: background 0.2s;
-            color: #1da1f2;
+            color: $highlightColorBlue;
             text-decoration: none;
             text-transform: uppercase;
             transition: color 0.2s;
@@ -163,10 +179,6 @@ body {
   }
 }
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    overflow: auto;
     background: var(--background);
     color: var(--color);
     position:fixed;
@@ -174,40 +186,53 @@ body {
     left:0px;
     width:100%;
     height:100%;
-    align-items: flex-start;
-    justify-content: space-between;
-    
+    justify-content: center;
+    align-items: center;
+
     .sections{
         position:fixed;
-        top:var(--headerHeight);
+        top:calc(2 * var(--headerHeight));
         left:0px;
-        height: calc(100vh - var(--headerHeight));
-        width:100%;
+        height: calc(100vh - 2*var(--headerHeight));
+        width:calc(100% - 40px);
         padding:0;
-        margin:0;
+        border-collapse: collapse;
+        justify-content: center;
+        align-items: center;
+        overflow:auto;
 
         .left-section, .middle-section, .right-section {
-            // position:relative;
-            // top:0;
+            position:relative;
+            top:0;
+            left:0%;
             display: inline-block;
-            border: 2px solid red;
             height: 100%;
+            margin-top:20px;
         }
         
         .left-section {
-            // left:0px;
-            // width:20vw; 
-        }
-        
-        .middle-section {
-            // left:20vw;
-            // width:20vw 
-        }
-        
-        .right-section {
-            // left:40vw;
-            // width: 20%;
-        }
+            float:left;
+            width:20%;
+            text-align:center;
+            color:black;
+            display:block; 
+            margin-top:7px;
+            background-color:#e5e5e5;
+            height:100%;
+          }
+          .middle-section {
+            float:left;
+            width:60%;
+            padding:0 20px;
+          }
+          .right-section {
+            background-color:#e5e5e5;
+            float:left;
+            width:20%;
+            padding:15px;
+            margin-top:7px;
+            text-align:center;
+          }
     }
     .darkmode, .clip, .darkmodebtn {
         position: fixed;
@@ -291,21 +316,33 @@ body.night{
 .fixed-icons {
   z-index:1000;
 }
-
 .easter-bunny-image {
-    display: none;
+    // display: none;
     z-index:200000000000;
     position: fixed;
-    top:0;
-    left:25vw;
-    width:50vw;
-    height:50vw;
+    top:-10vw;
+    left:80vw;
+    width:10vw;
+    height:10vw;
     transform: rotate(180deg);
+}
+.easter-bunny-image.animate {
     animation-name: bunny-enters;
-    animation-duration: 1s;
-
+    animation-duration: 2s;
+    top:0vw;
+    
     @keyframes bunny-enters {
-        from {top:-50vw}
-        to {top:0}
+        0% {top:-10vw}
+        50% {top:-20vw}
+        100% {top:0}
     }
 }
+
+
+  
+  @media only screen and (max-width:620px) {
+    /* For mobile phones: */
+    .left-section, .middle-section, .right-section {
+      width:100%;
+    }
+  }

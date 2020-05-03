@@ -125,6 +125,9 @@ function drawPose(pose) {
         }
     }
 }
+function dark_mode() {
+    $(".container").toggleClass("dark");
+}
 
 //function to toggle dark mode
 // Code By Webdevtrick ( https://webdevtrick.com )
@@ -144,10 +147,13 @@ $(document).on("click", ".darkmode", function(){
 		buttonenabled = true;
 	}, 1000); 
 });
-$(document).on("dblclick", ".darkmode", function(){
-	console.log("easter bunny");
-});
-
+function bunny_animate() {
+    bunny = $("#bunny-imag");
+    bunny.addClass('animate');
+    setTimeout(function(){
+        bunny.removeClass('animate');
+    },10000);
+}
 const scrollbind = el => el.bind("scroll", function(){
 	scroll = $(this).scrollTop();
 	if($(".container").length > 1)

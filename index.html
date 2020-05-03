@@ -15,7 +15,7 @@
 
 </head>
 <body>
-  <!-- <img class="easter-bunny-image" src="..\icons\easter-bunny.png"> -->
+  <img class="easter-bunny-image" id="bunny-imag" src="..\icons\easter-bunny.png">
   <div id="container" class="container">
     <div id="top-bar">
       <h1><a href="index.html">ExerciseBuddy</a></h1></a>
@@ -32,12 +32,12 @@
               </li>
               <li><a href="pages/about-us.html">About</a></li>
               <li><a href="pages/contact-us.html">Contact</a></li>
+              <li onclick="dark_mode()" ondblclick="bunny_animate()">dark</li>
           </ul>
       </nav>
     </div>
-    <table >
-      <tr class="sections">
-        <td class="left-section">
+    <div  class="sections">
+        <div class="left-section">
           <div id="label-container"></div>
           <hr>
           <div id="squat-boolean-container"></div>
@@ -47,21 +47,23 @@
           <div id="pushup-boolean-container"></div>
           <div id="pushup-count-container"></div>
           <div id="pushup-status-container"></div>
-        </td>
-        <td class="middle-section">
+        </div>
+        <div class="middle-section">
           <div>Teachable Machine Pose Model</div>
           <div><canvas id="canvas"></canvas></div>
-        </td>
-        <td class="right-section">
-          <button type="button" onclick="init()">Camera Permission</button><br>
+        </div>
+        <div class="right-section">
+          <button type="button" onclick="init()">start camera</button><br>
           <button type="button" onclick="countSquats()">Start Squats</button><br>
           <button type="button" onclick="countPushups()">Start pushups</button><br>
-        </td>
-      </td>
-    </table>
-    <div class="darkmode fa-moon-cloud"></div>
-    <div class="clip"></div>
-    <div class="darkmodebtn"><img src="https://img.icons8.com/cotton/64/000000/settings--v1.png" width="30px" height="30px" /></div>
+        </div>
+      </div>
+    </div>
+    <div hidden>
+      <div class="darkmode fa-moon-cloud"></div>
+      <div class="clip"></div>
+      <div class="darkmodebtn"><img src="https://img.icons8.com/cotton/64/000000/settings--v1.png" width="30px" height="30px" /></div>
+    </div>
   </div>
 </body>
 </html>
