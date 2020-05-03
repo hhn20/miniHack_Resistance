@@ -14,7 +14,7 @@
       <h1>ExerciseBuddy</h1>
       <nav class="nav-class">
           <ul>
-              <li><a href="#">Home</a></li>
+              <li><a href="index.html">Home</a></li>
               <li>
                   <a href="#">Workout</a>
                   <ul>
@@ -22,10 +22,10 @@
                       <li><a href="#">Women</a></li>
                   </ul>
               </li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Contact</a></li>
-              <li><a href="#">Getting Started</a></li>
-              <li onclick="myFunction()">dark mode</li>
+              <li><a href="about-us.html">About</a></li>
+              <li><a href="contact-us.html">Contact</a></li>
+              <li><a href="getting-started.html">Getting Started</a></li>
+              <li onclick="dark_mode()">dark mode</li>
           </ul>
       </nav>
   </div>
@@ -54,7 +54,7 @@
   </div>
 
   <script>
-  function myFunction() {
+  function dark_mode() {
     var element = document.body;
     element.classList.toggle("dark-mode");
     var topbar = document.getElementById("top-bar");
