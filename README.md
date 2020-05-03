@@ -26,6 +26,7 @@ FEATURES:
 - get exercise training for specific muscles with our MuscleMan 
   just by clicking on the desired muscles/body parts.	
 - DevMod : Get Insight how the ExerciseBuddy works.
+- Mobile Responsive
 
 
 GETTING STARTED STEPS:
